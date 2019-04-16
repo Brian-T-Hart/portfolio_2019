@@ -61598,6 +61598,8 @@ if (token) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _BarGraph_Bar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../BarGraph/Bar */ "./resources/js/components/BarGraph/Bar.js");
+
 
 
 var About = function About() {
@@ -61606,7 +61608,51 @@ var About = function About() {
     id: "section-about"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "section-title"
-  }, "About"));
+  }, "About"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row d-flex justify-content-center align-items-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-md-6 col-xs-12 p-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    "class": "about-image",
+    src: "https://www.brianthart.com/assets/images/brian.png"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "pt-3 text-center"
+  }, "Full Stack Web Developer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-justify"
+  }, "I am a full-stack web developer who loves to solve challenges and create great user experiences. JavaScript, React, Node, PHP, Laravel, and MySQL are a few of my favorite tools to work with. When I am not coding, I am spending time with my family, playing roller hockey, or learning new skills.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-md-6 col-xs-12 p-4",
+    id: "about-bar-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BarGraph_Bar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "HTML",
+    width: "85%"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BarGraph_Bar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "CSS",
+    width: "80%"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BarGraph_Bar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "JavaScript",
+    width: "85%"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BarGraph_Bar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "React",
+    width: "75%"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BarGraph_Bar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "MySQL",
+    width: "80%"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BarGraph_Bar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "Laravel",
+    width: "70%"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BarGraph_Bar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "PHP",
+    width: "70%"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BarGraph_Bar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "Node.js",
+    width: "70%"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BarGraph_Bar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "Git",
+    width: "80%"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BarGraph_Bar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "Jira",
+    width: "50%"
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
@@ -61691,6 +61737,38 @@ if (document.getElementById('app')) {
 
 /***/ }),
 
+/***/ "./resources/js/components/BarGraph/Bar.js":
+/*!*************************************************!*\
+  !*** ./resources/js/components/BarGraph/Bar.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Bar = function Bar(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bar-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bar mb-3",
+    style: {
+      width: props.width
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bar-title text-center"
+  }, props.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bar-width text-center"
+  }, props.width)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Bar);
+
+/***/ }),
+
 /***/ "./resources/js/components/Contact/Contact.js":
 /*!****************************************************!*\
   !*** ./resources/js/components/Contact/Contact.js ***!
@@ -61728,20 +61806,75 @@ var Contact = function Contact() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
-var Home = function Home() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "section d-flex flex-column justify-content-center pl-5 pr-5",
-    id: "section-home"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "portfolio-name"
-  }, "Brian Hart"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "portfolio-description"
-  }, "Full Stack Web Developer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn btn-primary"
-  }, "Hijack this page"));
-};
+
+var Home =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Home, _Component);
+
+  function Home(props) {
+    var _this;
+
+    _classCallCheck(this, Home);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Home).call(this, props));
+    _this.state = {
+      portfolioName: 'Brian Hart',
+      portfolioDescription: 'Full Stack Web Developer'
+    };
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(Home, [{
+    key: "handleClick",
+    value: function handleClick() {
+      console.log('clicked');
+    }
+  }, {
+    key: "handleChange",
+    value: function handleChange() {
+      console.log('changing');
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "section d-flex flex-column justify-content-center pl-5 pr-5",
+        id: "section-home"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "portfolio-name",
+        id: "portfolio-name"
+      }, this.state.portfolioName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "portfolio-description"
+      }, this.state.portfolioDescription), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn btn-primary",
+        onClick: this.handleClick
+      }));
+    }
+  }]);
+
+  return Home;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 
@@ -61803,7 +61936,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Navbar = function Navbar() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "d-flex flex-column justify-content-around",
+    className: "d-sm-flex flex-sm-column justify-content-around",
     id: "section-navbar"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Icons_NavIcon__WEBPACK_IMPORTED_MODULE_1__["default"], {
     className: "fas fa-home",
