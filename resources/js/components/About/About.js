@@ -7,7 +7,7 @@ const About = () => (
 		
 		<div className="row d-flex justify-content-center align-items-center">
 			<div className="col-md-6 col-xs-12 p-4">
-				<img class="about-image" src="https://www.brianthart.com/assets/images/brian.png" />
+				<img className="about-image" src="https://www.brianthart.com/assets/images/brian.png" />
 				<h4 className="pt-3 text-center">Full Stack Web Developer</h4>
 				<p className="text-justify">I am a full-stack web developer who loves to solve challenges and create great user experiences. JavaScript, React, Node, PHP, Laravel, and MySQL are a few of my favorite tools to work with. When I am not coding, I am spending time with my family, playing roller hockey, or learning new skills.</p>
 			</div>
