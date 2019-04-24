@@ -10655,7 +10655,8 @@ a.text-dark:focus {
   }
 }
 
-body {
+body,
+html {
   height: 100vh;
   overflow-x: hidden;
   width: 100vw;
@@ -10749,18 +10750,7 @@ i {
           transform: rotate(35deg);
 }
 
-#contact-form input,
-#contact-form textarea {
-  max-width: 500px;
-  width: 90%;
-}
-
-#contact-form textarea {
-  min-height: 150px;
-}
-
 #footer {
-  background-color: #252934;
   bottom: 0;
   left: 0;
   min-height: 200px;
@@ -10781,6 +10771,28 @@ i {
 
 #footer .footer-icon:hover {
   background-color: #3490dc;
+}
+
+@media (max-width: 575.98px) {
+  #footer {
+    width: 100%;
+  }
+}
+
+#section-contact #contact-form input,
+#section-contact #contact-form textarea {
+  max-width: 500px;
+  width: 90%;
+}
+
+#section-contact #contact-form textarea {
+  min-height: 150px;
+}
+
+@media (max-height: 695.98px) {
+  #section-contact {
+    min-height: 700px;
+  }
 }
 
 #section-home {

@@ -63213,7 +63213,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Footer = function Footer() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "d-sm-flex justify-content-center bg-darkgray",
+    className: "d-flex justify-content-center bg-darkgray",
     id: "footer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Icons_FooterIcons__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "https://www.linkedin.com/in/hartbriant/",
