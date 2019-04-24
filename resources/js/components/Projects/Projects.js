@@ -18,8 +18,9 @@ class Projects extends Component {
 					<div className="project-subtitle">
 						<h5 className="text-secondary">{project.subtitle}</h5>
 					</div>
-					<div className="project-btn">
-						<button className="btn btn-primary">Learn More</button>
+					<div className="d-flex justify-content-center project-links">
+						<a className="project-link pr-3" href={project.github_link} target="_blank">code</a>
+						<a className="project-link pl-3" href={project.web_link} target="_blank">site</a>
 					</div>
 				</div>
 			</div>
