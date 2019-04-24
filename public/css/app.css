@@ -10657,6 +10657,7 @@ a.text-dark:focus {
 
 body {
   height: 100vh;
+  overflow-x: hidden;
   width: 100vw;
 }
 
@@ -10665,7 +10666,7 @@ i {
   font-size: 20px;
 }
 
-img {
+.about-image {
   border: 10px solid silver;
   border-radius: 110px;
   display: block;
@@ -10735,6 +10736,17 @@ img {
   letter-spacing: 4px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+#under-construction {
+  background: yellow;
+  color: #252934;
+  padding: 5px 100px;
+  position: absolute;
+  right: -50px;
+  top: 80px;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
 }
 
 #contact-form input,

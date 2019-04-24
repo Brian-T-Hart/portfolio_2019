@@ -24,6 +24,7 @@ class Home extends Component {
 				<h1 className="portfolio-name" id="portfolio-name">{this.state.portfolioName}</h1>
 				<h2 className="portfolio-description">{this.state.portfolioDescription}</h2>
 				<button className="btn btn-primary" onClick={this.handleClick}></button>
+				<h4 id="under-construction">Under Construction</h4>
 			</div>
         );
     }
