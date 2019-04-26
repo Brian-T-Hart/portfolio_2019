@@ -63480,10 +63480,10 @@ function (_Component) {
   _createClass(Projects, [{
     key: "render",
     value: function render() {
-      var projects = this.state.projects.map(function (project) {
+      var projects = this.state.projects.map(function (project, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "project-container",
-          key: project.id
+          key: index
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "card",
           style: {

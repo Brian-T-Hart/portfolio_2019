@@ -10,8 +10,8 @@ class Projects extends Component {
 	}
 
 	render() {
-		const projects = this.state.projects.map(project =>
-			<div className="project-container" key={project.id}>
+		const projects = this.state.projects.map((project, index) =>
+			<div className="project-container" key={index}>
 				<div className="card" style={{background: 'url(' + project.image_link + ') center center/cover'}}></div>
 				<div className="project-text text-center">
 					<div className="project-title font-weight-bold">{project.title}</div>
