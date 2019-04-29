@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
 import projectDetails from './projectDetails';
+import ProjectModal from './ProjectModal';
+import ProjectModalBtn from './ProjectModalBtn';
 
 class Projects extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			projects: projectDetails
+			projects: projectDetails,
+			viewMoreProject: ''
 		}
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+	handleClick() {
+		const projectId = event.target.id;
+		this.setState({viewMoreProject: projectDetails[projectId]});
 	}
 
 	render() {
@@ -19,8 +28,7 @@ class Projects extends Component {
 						<h5 className="text-secondary">{project.subtitle}</h5>
 					</div>
 					<div className="d-flex justify-content-center project-links">
-						<a className="project-link pr-3" href={project.github_link} target="_blank">code</a>
-						<a className="project-link pl-3" href={project.web_link} target="_blank">site</a>
+						<ProjectModalBtn id={index} onClick={this.handleClick} />
 					</div>
 				</div>
 			</div>
@@ -32,6 +40,7 @@ class Projects extends Component {
 				<div className="d-flex justify-content-center row" id="gallery">
 					{ projects }
 				</div>
+				<ProjectModal project={this.state.viewMoreProject}/>
 			</div>
 		)
 	}
