@@ -13,7 +13,7 @@
   --purple: #9561e2;
   --pink: #f66D9b;
   --red: #e3342f;
-  --orange: #f6993f;
+  --orange: #FFA500;
   --yellow: #ffed4a;
   --green: #38c172;
   --teal: #4dc0b5;
@@ -10737,6 +10737,10 @@ i {
   letter-spacing: 4px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+.text-orange {
+  color: #FFA500;
 }
 
 #under-construction {

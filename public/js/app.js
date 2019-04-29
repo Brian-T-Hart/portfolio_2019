@@ -63427,6 +63427,95 @@ var Navbar = function Navbar() {
 
 /***/ }),
 
+/***/ "./resources/js/components/Projects/ProjectModal.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/Projects/ProjectModal.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var ProjectModal = function ProjectModal(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal fade",
+    id: "learnMoreModal",
+    tabIndex: "-1",
+    role: "dialog",
+    "aria-labelledby": "learnMoreModalLabel",
+    "aria-hidden": "true"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal-dialog",
+    role: "document"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal-content"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal-header justify-content-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: props.project.image_link
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal-body"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "modal-title text-orange font-weight-bold",
+    id: "learnMoreModalLabel"
+  }, props.project.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.project.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "d-flex justify-content-center project-links"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "project-link pr-3",
+    href: props.project.github_link,
+    target: "_blank"
+  }, "view code"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "project-link pl-3",
+    href: props.project.web_link,
+    target: "_blank"
+  }, "view site"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal-footer"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "button",
+    className: "close",
+    "data-dismiss": "modal",
+    "aria-label": "Close"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    "aria-hidden": "true"
+  }, "\xD7")))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProjectModal);
+
+/***/ }),
+
+/***/ "./resources/js/components/Projects/ProjectModalBtn.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/Projects/ProjectModalBtn.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var ProjectModalBtn = function ProjectModalBtn(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "button",
+    className: "btn btn-primary",
+    "data-toggle": "modal",
+    "data-target": "#learnMoreModal",
+    id: props.id,
+    onClick: props.onClick
+  }, "Learn More"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProjectModalBtn);
+
+/***/ }),
+
 /***/ "./resources/js/components/Projects/Projects.js":
 /*!******************************************************!*\
   !*** ./resources/js/components/Projects/Projects.js ***!
@@ -63439,6 +63528,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _projectDetails__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projectDetails */ "./resources/js/components/Projects/projectDetails.js");
+/* harmony import */ var _ProjectModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProjectModal */ "./resources/js/components/Projects/ProjectModal.js");
+/* harmony import */ var _ProjectModalBtn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProjectModalBtn */ "./resources/js/components/Projects/ProjectModalBtn.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -63449,13 +63540,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
 
 
 
@@ -63472,14 +63565,26 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Projects).call(this, props));
     _this.state = {
-      projects: _projectDetails__WEBPACK_IMPORTED_MODULE_1__["default"]
+      projects: _projectDetails__WEBPACK_IMPORTED_MODULE_1__["default"],
+      viewMoreProject: ''
     };
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(Projects, [{
+    key: "handleClick",
+    value: function handleClick() {
+      var projectId = event.target.id;
+      this.setState({
+        viewMoreProject: _projectDetails__WEBPACK_IMPORTED_MODULE_1__["default"][projectId]
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var projects = this.state.projects.map(function (project, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "project-container",
@@ -63499,15 +63604,10 @@ function (_Component) {
           className: "text-secondary"
         }, project.subtitle)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "d-flex justify-content-center project-links"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          className: "project-link pr-3",
-          href: project.github_link,
-          target: "_blank"
-        }, "code"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          className: "project-link pl-3",
-          href: project.web_link,
-          target: "_blank"
-        }, "site"))));
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectModalBtn__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          id: index,
+          onClick: _this2.handleClick
+        }))));
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "section",
@@ -63517,7 +63617,9 @@ function (_Component) {
       }, "Projects"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex justify-content-center row",
         id: "gallery"
-      }, projects));
+      }, projects), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectModal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        project: this.state.viewMoreProject
+      }));
     }
   }]);
 
@@ -63540,19 +63642,19 @@ __webpack_require__.r(__webpack_exports__);
 var projectDetails = [{
   title: 'TutorApp',
   subtitle: 'Laravel, PHP, React, MySQL',
-  description: 'A web application for tutors to record student info, schedule lessons, record payments, track income and quickly communicate with clients.',
+  description: 'A web application for tutors to record student information, schedule lessons, record payments, track income and quickly communicate with clients. It was built within the Laravel framework. The backend is written in PHP and connects to a MySQL database. The frontend is written in React. Other tools include Bootstrap, Sass, Font-Awesome, Mailgun, Git, and Heroku.',
   image_link: 'https://res.cloudinary.com/dfonttj4w/image/upload/c_scale,h_250,q_100,w_350/v1555794887/portfolio/TutorApp4.png',
   web_link: 'https://www.tutorapp.app',
   github_link: 'https://github.com/Brian-T-Hart/tutor-tool',
-  tags: ['laravel', 'php', 'react', 'mysql']
+  tags: ['laravel', 'mysql', 'php', 'react']
 }, {
   title: 'WCHS Worlviews',
   subtitle: 'MySQL, Express, React, Node',
-  description: 'Thanks for checking out WCHS-Lifecalling. I had a lot of fun working on this React app that I made for a high school Life Calling class. The app allows students to record and track information regarding their personality and strengths as they take various tests throughout the year. After each test, the students select values from a list and the data is quickly populated to the screen and stored in a MySQL database for future retrieval. The app also allows for the upload of three documents in pdf, jpeg, or png format. The site was constructed using a MySQL database, Express, React on the front end, Node.js, and Cloudinary for document management.',
+  description: 'I had a lot of fun working on this React app that I made for a high school Life Calling class. The web app allows students to record and track information regarding their personality and strengths as they take various tests throughout the year. After each test, the students select values from a list and the data is quickly populated to the screen and stored in a MySQL database for future retrieval. The app also allows for the upload of three documents in pdf, jpeg, or png format. The site was constructed using a MySQL database, Express, React, Node.js, and Cloudinary for document management. Github houses the repository. Git was used for source control. The site is deployed on Heroku.',
   image_link: 'https://res.cloudinary.com/dfonttj4w/image/upload/c_scale,h_250,q_100,w_350/v1555793979/portfolio/lifecalling1.png',
   web_link: 'https://wchs-lifecalling-demo.herokuapp.com/',
   github_link: 'https://github.com/Brian-T-Hart/WCHS-Lifecalling-demo',
-  tags: ['cloudinary', 'express', 'node', 'react', 'mysql']
+  tags: ['cloudinary', 'express', 'mysql', 'node', 'react']
 }, {
   title: 'ClassWorx',
   subtitle: 'MySQL, Express, Handlebars, Node',
@@ -63560,19 +63662,19 @@ var projectDetails = [{
   image_link: 'https://res.cloudinary.com/dfonttj4w/image/upload/c_scale,h_250,q_100,w_350/v1555794214/portfolio/classworx1.png',
   web_link: 'https://class-worx.herokuapp.com',
   github_link: 'https://github.com/Brian-T-Hart/class-worx',
-  tags: ['cloudinary', 'node', 'express', 'handlebars', 'mysql']
+  tags: ['cloudinary', 'express', 'handlebars', 'mysql', 'node']
 }, {
   title: 'Goal Post',
   subtitle: 'MySQL, Express, React, Node',
-  description: 'Bisque3, aka "Goal-Post" is a React-based application that assists sales reps from small to mid-sized companies. It will allow companies to create a digital hub or dashboard for their sales reps, allowing them to efficiently schedule meetings and deliveries, and to track inventory and sales.',
+  description: 'Goal-Post is a React-based application that assists sales reps from small to mid-sized companies. It will allow companies to create a digital hub or dashboard for their sales reps, allowing them to efficiently schedule meetings and deliveries, and to track inventory and sales. Goal-Post was a group effort, the third and final project of the UCI Coding Bootcamp. I worked on a team of five and participated in many aspects, such as, building react components, incorporating Chart.js, designing the database and setting up controllers.',
   image_link: 'https://res.cloudinary.com/dfonttj4w/image/upload/c_scale,h_250,q_100,w_350/v1556065536/portfolio/GoalPost.png',
   web_link: 'https://goal-post-crm.herokuapp.com/',
   github_link: 'https://github.com/Brian-T-Hart/bisque3',
-  tags: ['node', 'mysql', 'react', 'express']
+  tags: ['express', 'mysql', 'node', 'react']
 }, {
   title: 'GemmaList',
   subtitle: 'Laravel, PHP, MySQL',
-  description: 'GemmaList is a todo app built so that multiple lists can be viewed on the screen at one time. It was built using PHP and MySQL within the Laravel framework, and hosted on Heroku',
+  description: 'GemmaList is a todo app I built so that multiple lists can be viewed on the screen at one time. It was built using PHP, MySQL, and Blade within the Laravel framework. It utilizes Git and Gitub for source control and is hosted on Heroku.',
   image_link: 'https://res.cloudinary.com/dfonttj4w/image/upload/c_scale,h_250,q_100,w_350/v1555796136/portfolio/GemmaList2.png',
   web_link: 'https://gemmalist.herokuapp.com/',
   github_link: 'https://github.com/Brian-T-Hart/gemma-list',
