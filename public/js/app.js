@@ -62882,7 +62882,7 @@ var About = function About() {
     className: "col-md-6 col-xs-12 p-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "about-image",
-    src: "https://res.cloudinary.com/dfonttj4w/image/upload/v1555738247/b7u4tntezpsyvk8rke3w.png"
+    src: "https://res.cloudinary.com/dfonttj4w/image/upload/c_scale,h_400,q_100/v1555738247/b7u4tntezpsyvk8rke3w.png"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "pt-3 text-center"
   }, "Full Stack Web Developer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
