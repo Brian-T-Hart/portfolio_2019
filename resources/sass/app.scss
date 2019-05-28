@@ -59,6 +59,10 @@ i {
   background-color: $darkGray;
 }
 
+.bg-lightgray {
+  background-color: $lightGray;
+}
+
 .content-container {
   left: 100px;
   position: relative;
@@ -95,7 +99,7 @@ i {
 
 // temporary construction sign
 #under-construction {
-  background: yellow;
+  background: $yellow;
   color: $darkGray;
   padding: 5px 100px;
   position: absolute;
@@ -170,6 +174,10 @@ i {
 
   @media (max-height: 795.98px) {
     padding: 10% 0;
+  }
+
+  @media (max-height: 600px) {
+    padding: 5% 0;
   }
 }
 
