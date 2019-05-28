@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import About from './About/About';
+import Blog from './Blog/Blog';
 import Contact from './Contact/Contact';
 import Home from './Home/Home';
 import Navbar from './Navbar/Navbar';
@@ -14,6 +15,7 @@ export default class App extends Component {
                 <div className="content-container">
                     <Home />
                     <About />
+                    <Blog />
                     <Projects />
                     <Contact />
                 </div>
