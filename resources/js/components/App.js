@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
-import BlogPage from './BlogPage';
 import HomePage from './HomePage';
 import BlogPost1 from './BlogPost1';
 import BlogPost2 from './BlogPost2';
@@ -13,7 +12,6 @@ export default class App extends Component {
         return (
             <Router>
                 <Switch>
-                    <Route exact path="/blog" component={BlogPage} />
                     <Route exact path="/blog/1" component={BlogPost1} />
                     <Route exact path="/blog/2" component={BlogPost2} />
                     <Route exact path="/blog/3" component={BlogPost3} />
